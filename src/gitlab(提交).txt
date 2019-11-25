@@ -1,0 +1,40 @@
+
+
+useState
+yran
+mockjs
+gitlab
+eslint规范
+
+
+
+
+
+有的情况下需要配置SSH秘钥  需要的话这里有个网站里面都有步骤
+https://blog.csdn.net/lizhiqiang1217/article/details/88801158
+
+
+第一步： （把项目经理建好的公用代码或架子拉在自己文件夹）
+  cd 进入自己文件目录
+  git clone https://github.com/li1416611767/OAcrm.git（Git地址） 
+第二步：创建自己分支
+  git branch lph (创建自己的新分支)
+  git branch -a (可以查看远程仓库所有分支)
+  git checkout lph (切换分支)
+  切换到自己分支以后就可以写今天的具体任务了
+第三步:往自己分支上推代码 （一般一天结束把当天的代码推上去）
+  git add -A 或者 git add .(把自己的代码放在暂存区)
+
+  git commit -m“内容” (如果git提交有eslint验证的话 在这一步enter之后如果
+			eslint不规范会有报× 这个时候去代码具体解决eslint问题)
+
+  git push https://github.com/li1416611767/OAcrm.git（Git地址） lph(分支名) 这样就推在啦自己分支
+
+
+如果项目经理把master里面的代码有变动 这个时候就需要把master里面的代码合并到自己分支
+ 1. git branch master 切换到主分支
+ 2. git pull 把master 分支的代码拉一下
+ 3. git branch lph 切换到自己分支
+ 4. git merge master(你要把哪个分支的代码合并过来)  合并分支
+  合并之后会报冲突 这个时候看提示  用vscode去解决冲突 vscode都会有提示的 
+ 5. 把第三步 往自己分支上推代码 流程在走一遍
